@@ -10,6 +10,8 @@ import (
 
 func main() {
 
+	log.SetFlags(0)
+
 	htmlDir := flag.String("html", ".", "Directory of the static HTML files")
 	port := flag.Uint("port", 4242, "Port on which the Server runs")
 	flag.Parse()
