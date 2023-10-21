@@ -6,7 +6,6 @@ After=network.target
 ExecStart=/usr/local/bin/heimdall --html=/usr/share/heimdall/html/
 Restart=always
 User=nobody
-Group=nogroup
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=heimdall
