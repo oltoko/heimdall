@@ -7,8 +7,8 @@ ExecStart=/usr/local/bin/heimdall --html=/usr/share/heimdall/html/
 Restart=always
 User=nobody
 Group=nogroup
-StandardOutput=syslog
-StandardError=syslog
+StandardOutput=journal
+StandardError=journal
 SyslogIdentifier=heimdall
 
 [Install]
