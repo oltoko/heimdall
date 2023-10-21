@@ -20,16 +20,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	addr := fmt.Sprintf(":%d", *port)
 	
-	// Definiere den Dateipfad
 	fileServer := http.FileServer(http.Dir(absHtmlDir))
-	// Setze den Handler für die Route "/"
 	http.Handle("/", fileServer)
 	log.Println("Serving Files from", absHtmlDir, "and listening on", addr)
 
-	// Starte den HTTP-Server auf Port 4242
 	err = http.ListenAndServe(addr, nil)
 	if err != nil {
 		log.Fatal(err)
