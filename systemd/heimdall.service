@@ -1,0 +1,15 @@
+[Unit]
+Description=Heimdall
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/heimdall --html=/usr/share/heimdall/html/
+Restart=always
+User=nobody
+Group=nogroup
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=heimdall
+
+[Install]
+WantedBy=multi-user.target
